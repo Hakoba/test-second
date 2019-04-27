@@ -66,7 +66,7 @@ export default {
       let letterOfCell = alphabet.indexOf(pointArr[0]); //буквенная часть названия клетки, напр: A,B,C..
       for (let i = 0; i < 8; i++) {
         try {
-          if( +pointArr[1] + magicArray[i][1] >= 1 )
+          if( +pointArr[1] + magicArray[i][1] >= 1 && +pointArr[1] + magicArray[i][1] <= 8)
             alertedArray.push(numberOfCell[letterOfCell + magicArray[i][0]].concat(+pointArr[1] + magicArray[i][1])) //пушим в массив искомые клетки
         } catch (err) {
         //  console.log('Случился не успех')
